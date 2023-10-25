@@ -17,7 +17,11 @@ struct FavoriteButton: View {
 
     var body: some View {
         Button {
-            isSet.toggle()
+            withAnimation{
+                isSet.toggle()
+                
+            }
+            
         } label: {
             Label("Toggle Favorite", systemImage: isSet ? "star.fill" : "star")
                 .labelStyle(.iconOnly)
